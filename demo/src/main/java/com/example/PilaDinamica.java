@@ -2,11 +2,9 @@ package com.example;
 
 public class PilaDinamica {
     private NodoPIla tope;
-    private int tamano;
 
     public PilaDinamica() {
         this.tope = null;
-        this.tamano = 0;
     }
 
     public boolean estaVacia() {
@@ -18,7 +16,6 @@ public class PilaDinamica {
         NodoPIla nuevoNodo = new NodoPIla(elemento);
         nuevoNodo.siguiente = tope;
         tope = nuevoNodo;
-        tamano++;
         System.out.println("Elemento " + elemento + " insertado");
     }
 
@@ -30,7 +27,6 @@ public class PilaDinamica {
         }
         int elemento = tope.dato;
         tope = tope.siguiente;
-        tamano--;
         return elemento;
     }
 
@@ -44,9 +40,7 @@ public class PilaDinamica {
         return tope.dato;
     }
 
-    public int tamanio() {
-        return tamano;
-    }
+    
 
     public void mostrar() {
         if (estaVacia()) {

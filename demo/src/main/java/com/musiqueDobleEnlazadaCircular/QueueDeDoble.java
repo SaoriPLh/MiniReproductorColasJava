@@ -44,13 +44,13 @@ public class QueueDeDoble {
             // --DESCOMENTA CUANDO TERMINES LA PRUBEA SIN QUE SEA CIRCULAR INTENTANDO DE OTRA MANERA -- 
 
             // aca acaba lo de circular
-            fin.setSiguiente(frente);
+            // fin.setSiguiente(frente);
 
             // esto es para mantener lo de circular y doble enlace
 
             frente.setAnterior(fin);
 
-            
+
             // fin.setSiguiente(nuevo);
             // fin = nuevo;
           
@@ -76,7 +76,7 @@ public class QueueDeDoble {
             frente.setAnterior(fin);
 
             //DESCOMENTA DESPUES
-            fin.setSiguiente(frente);
+            // fin.setSiguiente(frente);
         } 
         
 
@@ -91,7 +91,7 @@ public class QueueDeDoble {
         }
         NodoDeDoble aux = frente;
         System.out.println("🎶 Playlist:");
-        while (aux != null) {
+        while (aux != fin) {
             System.out.println("- " + aux.getCancion().getInformacion());
             aux = aux.siguiente;
         }
